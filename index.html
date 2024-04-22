@@ -10,14 +10,12 @@
     <meta content="stodola, lubianka, svadba, oslava, zabava, udalosti" name="keywords">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bellefair&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -28,14 +26,18 @@
     <link href="assets/css/ozmenu.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- Vendor JS Files -->
+    <link rel="stylesheet" href="assets/css/SmoothScroll.css" />
+    <script src="assets/js/SmoothScroll.min.js"></script>
+
 </head>
 
 <body>
 
     <!-- ======= Header ======= -->
     <header id="header" data-aos="fade-down">
-        <div class="image" id="logo-header">
-            <a href="#"><img src="assets/img/logo.png"></a>
+        <div class="image" id="header-logo">
+            <a href="#"><img src="assets/img/logo.png" id="header-logo-image"></a>
         </div>
         <div class="menu">
             <!-- ozMenu -->
@@ -43,122 +45,106 @@
             <div class="ozmenu mt-4">
                 <div class="menu-close"><span class="close"></span></div>
                 <ul class="ozmenu-nav">
-                    <li class="item dropdownitem">
-                        <a href="javascript:void(0);" class="nav-dropdown">Continium</a>
-                        <div class="dropdown">
-                            <ul>
-                                <li class="item item-close"><a href="about-us.html">About Us</a></li>
-                                <li class="item dropdownitem">
-                                    <a href="javascript:void(0);" class="nav-dropdown">Our Team</a>
-                                    <div class="dropdown">
-                                        <ul>
-                                            <li class="item item-close"><a href="our-team.html#specialists">Our specialists</a></li>
-                                            <li class="item item-close"><a href="our-team.html#board">Executive Board</a></li>
-                                            <li class="item item-close"><a href="our-team.html#career">Career</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="item item-close"><a href="sponsoring.html">Sponsoring</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="item dropdownitem">
-                        <a href="javascript:void(0);" class="nav-dropdown">Technology</a>
-                        <div class="dropdown">
-                            <ul>
-                                <li class="item item-close"><a href="our-solution.html">Our solutions</a></li>
-                                <li class="item item-close"><a href="our-products.html">Our products</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="item item-close"><a href="news.html">News</a></li>
-                    
-                    <li class="item item-close"><a href="#contact">Contact</a></li>
+                    <li class="item"><a href="#about">O nás</a></li>
+                    <li class="item"><a href="news.html">Naše služby</a></li>
+                    <li class="item"><a href="news.html">Priestory</a></li>
+                    <li class="item"><a href="news.html">Cenník</a></li>
+                    <li class="item"><a href="#contact" class="link-button">Kontakt <span class="arrow"></span></a></li>
                 </ul>
             </div>
             <!-- /ozMenu -->
         </div>
     </header>
 
-    <!-- ======= Title ======= -->
-    <section id="title" data-aos="fade-right">
-        <div id="logo-title">
-            <img src="assets/img/logo.png">
-            <h2>high performance analog circuits.</h2>
-        </div>
-    </section>
-    
+    <div class="viewport">
+        <div class="container">
 
-    <!-- ======= Contact ======= -->
-    <section id="contact">
-        <h1>Contact us</h1>
-        <form id="customForm">
-            <div class="row">
+        <!-- ======= Hero ======= -->
+        <section id="hero" data-aos="fade-down">
+            <video autoplay muted loop id="hero-video" style="width: 100%; margin-top: -10vw; ">
+                <source src="assets/img/hero.mp4" type="video/mp4">
+            </video>
+            <p class="text">Miesto pre vaše<br>jedinečné zážitky.</p>
+        </section>
+
+        <!-- ======= About ======= -->
+        <section id="about" data-aos="fade-up">
+            <img src="assets/img/about2.png">
+            <p class="description">Stodola Ľubianka sa nachádza neďaleko dediny Oslany v Trenčianskom kraji. Jej poloha a dispozícia ponúka návštevníkom osláviť udalosti súkromne, v nerušenej lokalite, s maximálnou kapacitou až 130 osôb. Svoje priestory ponúka verejnosti už viac ako XX rokov.</p>
+            <p class="text">Stodola<br>v srdci<br>prírody</p>
+        </section>
+
+        <!-- ======= Contact ======= -->
+        <section id="contact">
+            <h1>Contact us</h1>
+            <form id="customForm">
+                <div class="row">
+                    <div>
+                        <label for="name">*NAME:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter full name">
+                    </div>
+                    <div>
+                        <label for="mail">*EMAIL:</label>
+                        <input type="email" id="mail" name="mail" required placeholder="Enter email address">
+                    </div>
+                </div>
+                <div class="row2">
+                    <div>
+                        <label for="company">*COMPANY:</label>
+                        <input type="text" id="company" name="company" required placeholder="Enter name of your company">
+                    </div>
+                    <div>
+                        <label for="reason">*CONTACT REASON:</label>
+                        <select id="reason" name="reason" required>
+                            <option value="" selected disabled hidden><span>Select reason</span></option>
+                            <option value="Netlist conversion">Netlist conversion</option>
+                            <option value="20b-linear 100MS/s DAC">20b-linear 100MS/s DAC</option>
+                            <option value="14b 40kS/s serial ADC">14b 40kS/s serial ADC</option>
+                            <option value="15b 40kS/s serial ADC">15b 40kS/s serial ADC</option>
+                            <option value="12b 1MS/s serial ADC">12b 1MS/s serial ADC</option>
+                            <option value="14b 560kS/s pipeline ADC">14b 560kS/s pipeline ADC</option>
+                            <option value="Wireless 5G base station transceiver (500 MHz CTSD ADC, 1 GHz DAC)">Wireless 5G base station transceiver (500 MHz CTSD ADC, 1 GHz DAC)</option>
+                            <option value="LiDAR: optical receiver amplifier with 135dB DR in SiGe">LiDAR: optical receiver amplifier with 135dB DR in SiGe</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label>By checking this you consent to Continium Technologies processing your data and contacting you to fulfill your request. For more information on how we are committed to protecting and respecting your privacy, please review our <a href="privacy-policy.html">Privacy Policy</a></label>
+                </div>
+                <button type="submit">Send →</button>
+            </form>
+            
+            <h3 id="successMessage" style="display: none;">Thank you! We will contact you soon.</h3>
+            <h3 id="failureMessage" style="display: none;">Error! Please, try again later.</h3>
+
+            <div class="address">
                 <div>
-                    <label for="name">*NAME:</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter full name">
+                    <h5>ADDRESS SLOVAKIA:</h5>
+                    <a href="https://www.google.com/maps/place/Moyzesova+1038%2F24,+040+01+Ko%C5%A1ice/@48.7229918,21.2494112,17z/data=!3m1!4b1!4m6!3m5!1s0x473ee06663e1dca1:0xac67a0d6a2e9a4a0!8m2!3d48.7229883!4d21.2519861!16s%2Fg%2F11fwddtmnj?entry=ttu" target="_blank">Moyzesova 24, SK-040 01 Košice, Slovakia</a><br>
+                    <a href="https://www.google.com/maps/place/Ilkovi%C4%8Dova+2961%2F3,+841+04+Karlova+Ves/@48.1518532,17.0733446,17z/data=!3m1!4b1!4m6!3m5!1s0x476c8bec79fb1d3f:0x394d806810f1ab00!8m2!3d48.1518532!4d17.0733446!16s%2Fg%2F11cshst_8w?entry=ttu" target="_blank">Ilkovičova 3, SK-812 19 Bratislava, Slovakia</a>
                 </div>
                 <div>
-                    <label for="mail">*EMAIL:</label>
-                    <input type="email" id="mail" name="mail" required placeholder="Enter email address">
+                    <h5>ADDRESS GERMANY:</h5>
+                    <a href="https://www.google.com/maps/place/Krankenhausstra%C3%9Fe+36,+83043+Bad+Aibling,+Nemecko/@47.8622445,12.0108435,17z/data=!3m1!4b1!4m6!3m5!1s0x47761c334b9442c7:0xce9a2e76a3723bd!8m2!3d47.8622409!4d12.0134184!16s%2Fg%2F11c1_c1_gm?entry=ttu" target="_blank">Krankenhausstr. 36, D-83043 Bad Aibling, Germany</a>
                 </div>
             </div>
-            <div class="row2">
-                <div>
-                    <label for="company">*COMPANY:</label>
-                    <input type="text" id="company" name="company" required placeholder="Enter name of your company">
-                </div>
-                <div>
-                    <label for="reason">*CONTACT REASON:</label>
-                    <select id="reason" name="reason" required>
-                        <option value="" selected disabled hidden><span>Select reason</span></option>
-                        <option value="Netlist conversion">Netlist conversion</option>
-                        <option value="20b-linear 100MS/s DAC">20b-linear 100MS/s DAC</option>
-                        <option value="14b 40kS/s serial ADC">14b 40kS/s serial ADC</option>
-                        <option value="15b 40kS/s serial ADC">15b 40kS/s serial ADC</option>
-                        <option value="12b 1MS/s serial ADC">12b 1MS/s serial ADC</option>
-                        <option value="14b 560kS/s pipeline ADC">14b 560kS/s pipeline ADC</option>
-                        <option value="Wireless 5G base station transceiver (500 MHz CTSD ADC, 1 GHz DAC)">Wireless 5G base station transceiver (500 MHz CTSD ADC, 1 GHz DAC)</option>
-                        <option value="LiDAR: optical receiver amplifier with 135dB DR in SiGe">LiDAR: optical receiver amplifier with 135dB DR in SiGe</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
+        </section>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <p><span id="footerYear"></span> &copy; All rights reserved</p>
+            <div class="links">
+                <a href="impressum.html">Impressum</a>
+                <span>|</span>
+                <a href="privacy-policy.html">Privacy Policy</a>
             </div>
-            <div class="consent">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label>By checking this you consent to Continium Technologies processing your data and contacting you to fulfill your request. For more information on how we are committed to protecting and respecting your privacy, please review our <a href="privacy-policy.html">Privacy Policy</a></label>
-            </div>
-            <button type="submit">Send →</button>
-        </form>
+            <a href="https://m-mwebsites.github.io/MandM/">MADE BY <b>M&M</b></a>
+        </footer>
         
-        <h3 id="successMessage" style="display: none;">Thank you! We will contact you soon.</h3>
-        <h3 id="failureMessage" style="display: none;">Error! Please, try again later.</h3>
-
-        <div class="address">
-            <div>
-                <h5>ADDRESS SLOVAKIA:</h5>
-                <a href="https://www.google.com/maps/place/Moyzesova+1038%2F24,+040+01+Ko%C5%A1ice/@48.7229918,21.2494112,17z/data=!3m1!4b1!4m6!3m5!1s0x473ee06663e1dca1:0xac67a0d6a2e9a4a0!8m2!3d48.7229883!4d21.2519861!16s%2Fg%2F11fwddtmnj?entry=ttu" target="_blank">Moyzesova 24, SK-040 01 Košice, Slovakia</a><br>
-                <a href="https://www.google.com/maps/place/Ilkovi%C4%8Dova+2961%2F3,+841+04+Karlova+Ves/@48.1518532,17.0733446,17z/data=!3m1!4b1!4m6!3m5!1s0x476c8bec79fb1d3f:0x394d806810f1ab00!8m2!3d48.1518532!4d17.0733446!16s%2Fg%2F11cshst_8w?entry=ttu" target="_blank">Ilkovičova 3, SK-812 19 Bratislava, Slovakia</a>
-            </div>
-            <div>
-                <h5>ADDRESS GERMANY:</h5>
-                <a href="https://www.google.com/maps/place/Krankenhausstra%C3%9Fe+36,+83043+Bad+Aibling,+Nemecko/@47.8622445,12.0108435,17z/data=!3m1!4b1!4m6!3m5!1s0x47761c334b9442c7:0xce9a2e76a3723bd!8m2!3d47.8622409!4d12.0134184!16s%2Fg%2F11c1_c1_gm?entry=ttu" target="_blank">Krankenhausstr. 36, D-83043 Bad Aibling, Germany</a>
-            </div>
         </div>
-    </section>
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <p><span id="footerYear"></span> &copy; All rights reserved</p>
-        <div class="links">
-            <a href="impressum.html">Impressum</a>
-            <span>|</span>
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </div>
-        <a href="https://m-mwebsites.github.io/MandM/">MADE BY <b>M&M</b></a>
-    </footer>
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>

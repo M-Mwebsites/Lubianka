@@ -7,11 +7,6 @@ body.hide-scrolling {
     overflow-y: hidden;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 /* Menu */
 .ozmenu ul.ozmenu-nav {
     display: flex;
@@ -57,8 +52,6 @@ body.hide-scrolling {
 
 @media screen and (min-width: 993px) {
     .ozmenu ul.ozmenu-nav>li a {
-        color: #333 !important;
-        font-weight: 500;
         text-decoration: none;
         padding: 10px 10px;
         background-color: transparent;

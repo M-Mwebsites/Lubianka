@@ -24,15 +24,14 @@
         let headerLogoImg = document.getElementById('header-logo-image');
         const headerScrolled = () => {
             if (window.scrollY > 150) {
-                header.style.height = "12vh";
+                header.style.height = "13vh";
                 header.style.backgroundColor = "rgba(39,37,32,0.9)";
-                headerLogo.style.alignSelf = "center";
                 headerLogoImg.style.width = "9vh";
             }
             else {
                 header.style.height = "15vh";
                 header.style.backgroundColor = "transparent";
-                headerLogo.style.alignSelf = "flex-end";
+                headerLogo.style.alignSelf = "center";
                 headerLogoImg.style.width = "12vh";
             }
         }
@@ -99,6 +98,30 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+    const servicesLink = document.querySelector('a[href="#services"]');
+    servicesLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        if (targetSection) {
+            const offset = targetSection.offsetTop - 200;
+            window.scroll({
+                top: offset,
+                behavior: "smooth"
+            });
+        }
+    });
+    const arealLink = document.querySelector('a[href="#areal"]');
+    arealLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        if (targetSection) {
+            const offset = targetSection.offsetTop - 200;
+            window.scroll({
+                top: offset,
+                behavior: "smooth"
+            });
+        }
+    });
     const contactLink = document.querySelector('a[href="#contact"]');
     contactLink.addEventListener("click", function (e) {
         e.preventDefault();
@@ -112,3 +135,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+
+
+
+//modal
+var modal = document.getElementById("modal");
+var modalImg = document.getElementById("modal-img");
+var galleryImages = document.querySelectorAll("#gallery img");
+var closeBtn = document.querySelector(".modal .close");
+var prevBtn = document.querySelector(".modal .prev");
+var nextBtn = document.querySelector(".modal .next");
+var currentIndex = 0;
+
+function openModal(index) {
+    currentIndex = index;
+    modal.style.display = "block";
+    modalImg.src = galleryImages[currentIndex].src;
+}
+
+galleryImages.forEach(function(img, index) {
+    img.onclick = function() {
+        openModal(index);
+    }
+});
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+};
+
+prevBtn.onclick = function() {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    modalImg.src = galleryImages[currentIndex].src;
+};
+
+nextBtn.onclick = function() {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    modalImg.src = galleryImages[currentIndex].src;
+};
+
+modal.onclick = function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+};

@@ -22,10 +22,11 @@ section {
     padding-left: 20px;
     padding-right: 20px;
     transition: 0.3s;
+    color: white;
 }
 
 .link-button:hover {
-    background-color: gray !important;
+    background-color: rgb(42, 42, 42) !important;
 }
 
 .link-button .arrow {
@@ -87,14 +88,32 @@ section {
 # Hero
 --------------------------------------------------------------*/
 
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden; /* Hide overflow */
+}
+
+#hero video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensure video covers the entire area */
+    width: 100%;
+    height: auto; /* Auto height to maintain aspect ratio */
+}
+
 #hero .text {
     font-size: 70px;
     font-weight: bold;
     line-height: 125%;
     color: white;
     position: absolute;
-    bottom: 25vh;
-    padding-left: 10%;
+    bottom: 15vh;
+    left: 0;
+    padding-left: 100px;
 }
 
 
@@ -121,6 +140,7 @@ section {
     width: 30%;
     font-size: 22px;
     align-self: center;
+    color: #4D5053;
 }
 
 #about .text {
@@ -133,6 +153,117 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+
+#services {
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+        to right,
+        white 0%,
+        white 30%,
+        #D5C9C545 30%,
+        #D5C9C545 100%
+      );
+}
+
+#services div {
+    width: 50%;
+}
+
+#services .description .title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 125%;
+    color: black;
+    margin: 0;
+}
+
+#services .description .text {
+    font-size: 22px;
+    align-self: center;
+    color: #4D5053;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+#services .description .link-button {
+    width: max-content;
+    font-size: 17px;
+    transition: 0.3s;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#services .images div {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+}
+
+#services .images div img {
+    width: 100%;
+}
+
+#services .images div p {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    width: max-content;
+}
+
+/*--------------------------------------------------------------
+# Areal
+--------------------------------------------------------------*/
+
+#areal {
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#areal .title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+}
+
+#areal #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+#areal #gallery img {
+    transition: 0.2s;
+}
+
+#areal #gallery img:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 
@@ -374,3 +505,80 @@ section {
   #conti.underline {
     text-decoration: underline;
   }
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 80vh;
+    max-width: 80vw;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+    .prev, .next {
+        background-color: transparent;
+        padding: 0;
+    }
+    .prev:hover, .next:hover {
+        background-color: transparent;
+    }
+}

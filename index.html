@@ -46,9 +46,9 @@
                 <div class="menu-close"><span class="close"></span></div>
                 <ul class="ozmenu-nav">
                     <li class="item"><a href="#about">O nás</a></li>
-                    <li class="item"><a href="news.html">Naše služby</a></li>
-                    <li class="item"><a href="news.html">Priestory</a></li>
-                    <li class="item"><a href="news.html">Cenník</a></li>
+                    <li class="item"><a href="#services">Naše služby</a></li>
+                    <li class="item"><a href="#areal">Priestory</a></li>
+                    <!-- <li class="item"><a href="news.html">Cenník</a></li> -->
                     <li class="item"><a href="#contact" class="link-button">Kontakt <span class="arrow"></span></a></li>
                 </ul>
             </div>
@@ -61,7 +61,7 @@
 
         <!-- ======= Hero ======= -->
         <section id="hero" data-aos="fade-down">
-            <video autoplay muted loop id="hero-video" style="width: 100%; margin-top: -10vw; ">
+            <video autoplay muted loop id="hero-video">
                 <source src="assets/img/hero.mp4" type="video/mp4">
             </video>
             <p class="text">Miesto pre vaše<br>jedinečné zážitky.</p>
@@ -72,6 +72,42 @@
             <img src="assets/img/about2.png">
             <p class="description">Stodola Ľubianka sa nachádza neďaleko dediny Oslany v Trenčianskom kraji. Jej poloha a dispozícia ponúka návštevníkom osláviť udalosti súkromne, v nerušenej lokalite, s maximálnou kapacitou až 130 osôb. Svoje priestory ponúka verejnosti už viac ako XX rokov.</p>
             <p class="text">Stodola<br>v srdci<br>prírody</p>
+        </section>
+
+        <!-- ======= Services ======= -->
+        <section id="services" data-aos="fade-up">
+            <div class="description">
+                <p class="title">Naše služby</p>
+                <p class="text">Priestory areálu umožňujú usporiadať akcie ako svadba, rodinné či firemné akcie. Vďaka skvelému cataringu, obsluhe a organizačnému tímu vám vašu akciu naplánujeme a prichýstame presne podľa vaších predstáv.</p>
+                <a href="#contact" class="link-button">Kontaktovať <span class="arrow"></span></a>
+            </div>
+            <div class="images">
+                <div>
+                    <img src="assets/img/services1.png">
+                    <p>Svadby</p>
+                </div>
+                <div>
+                    <img src="assets/img/services2.png">
+                    <p>Oslavy</p>
+                </div>
+                <div>
+                    <img src="assets/img/services3.png">
+                    <p>Firemné akcie</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Areal ======= -->
+        <section id="areal" data-aos="fade-up">
+            <p class="title">Priestory areálu</p>
+            <div id="gallery">
+                <img src="assets/img/areal/areal01.png">
+                <img src="assets/img/areal/areal02.png">
+                <img src="assets/img/areal/areal03.png">
+                <img src="assets/img/areal/areal04.png">
+                <img src="assets/img/areal/areal05.png">
+                <img src="assets/img/areal/areal06.png">
+            </div>
         </section>
 
         <!-- ======= Contact ======= -->
@@ -145,6 +181,14 @@
         
         </div>
     </div>
+
+            <!-- Modal Structure -->
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <span class="prev">&#10094;</span>
+                <span class="next">&#10095;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>

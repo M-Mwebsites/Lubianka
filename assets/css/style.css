@@ -172,8 +172,8 @@ section {
     background: linear-gradient(
         to right,
         white 0%,
-        white 30%,
-        #D5C9C545 30%,
+        white 20%,
+        #D5C9C545 20%,
         #D5C9C545 100%
       );
 }
@@ -258,6 +258,7 @@ section {
 }
 
 #areal #gallery img {
+    width: 30%;
     transition: 0.2s;
 }
 
@@ -274,16 +275,92 @@ section {
 #contact {
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 90px;
+    padding-top: 40px;
+    margin-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(
+        to right,
+        #D5C9C545 0%,
+        #D5C9C545 25%,
+        white 25%,
+        white 100%
+      );
 }
 
-#contact h1 {
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+#contact .info {
+    width: 50%;
+}
+
+#contact .info .title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 125%;
+    color: black;
     margin: 0;
-    padding-bottom: 50px;
+}
+
+#contact .info .text {
+    font-size: 22px;
+    align-self: center;
+    color: #4D5053;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+#contact .info .social {
+    margin-left: -3px;
+    display: flex;
+    gap: 10px;
+}
+
+#contact .info .social .fb {
+    background-color: black;
+    -webkit-mask: url(/assets/img/fb.svg) no-repeat center;
+    mask: url(/assets/img/fb.svg) no-repeat center;
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+
+#contact .info .social .fb:hover {
+    background-color: #0866ff;
+    cursor: pointer;
+}
+
+#contact .info .social .ig {
+    background-color: black;
+    -webkit-mask: url(/assets/img/ig.svg) no-repeat center;
+    mask: url(/assets/img/ig.svg) no-repeat center;
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+
+#contact .info .social .ig:hover {
+    background-color: #dc4a6b;
+    cursor: pointer;
+}
+
+#contact .info a {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    color: #4D5053;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+#contact .info a:hover {
+    color: black;
 }
 
 #contact form .row, #contact form .row2 {

@@ -87,11 +87,12 @@ function resizeBodyHeight() {
 //Links click scrolling
 document.addEventListener("DOMContentLoaded", function () {
     const aboutLink = document.querySelector('a[href="#about"]');
+    const header = document.getElementById("header");
     aboutLink.addEventListener("click", function (e) {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute("href"));
         if (targetSection) {
-            const offset = targetSection.offsetTop - 200;
+            const offset = targetSection.offsetTop - header.offsetHeight - 100;
             window.scroll({
                 top: offset,
                 behavior: "smooth"
@@ -103,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute("href"));
         if (targetSection) {
-            const offset = targetSection.offsetTop - 200;
+            const offset = targetSection.offsetTop - header.offsetHeight - 50;
             window.scroll({
                 top: offset,
                 behavior: "smooth"
@@ -115,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute("href"));
         if (targetSection) {
-            const offset = targetSection.offsetTop - 200;
+            const offset = targetSection.offsetTop - header.offsetHeight - 50;
             window.scroll({
                 top: offset,
                 behavior: "smooth"

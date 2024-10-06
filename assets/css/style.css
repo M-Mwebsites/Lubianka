@@ -44,7 +44,7 @@ section {
 #header {
     display: flex;
     justify-content: space-between;
-    height: 12vh;
+    height: 13vh;
     position: fixed;
     top: 0;
     width: 100%;
@@ -275,12 +275,12 @@ section {
 #contact {
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 40px;
+    padding-top: 100px;
     margin-top: 100px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 10%;
     background: linear-gradient(
         to right,
         #D5C9C545 0%,
@@ -363,168 +363,117 @@ section {
     color: black;
 }
 
-#contact form .row, #contact form .row2 {
+
+/** form **/
+#contact form {
+    width: 100%;
+}
+
+#contact form div {
+    width: 30%;
+}
+
+#contact form .row {
     display: flex;
-    gap: 10%;
-    padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
 }
 
-#contact form .row div, #contact form .row2 div {
-    display: grid;
-    width: 326px;
-}
-
-#contact .consent {
-    display: flex;
-    gap: 5px;
-    align-items: flex-start;
-}
-
-#contact .consent label {
+#contact form .row label {
+    display: block;
     color: black;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 160%;
-    max-width: 1000px;
+    padding-bottom: 10px;
 }
 
-#contact .consent label a {
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-    color: black;
-}
-
-#contact .consent label a:hover {
-    transition: 0.3s;
-    color: rgb(86, 86, 86);
-}
-
-#contact form label {
-    color: #C8C8C8;
+#contact form .row input, #contact form .row select {
+    width: -webkit-fill-available;
+    border: 2px solid black;
+    padding: 15px 10px;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%;
+    font-family: inherit;
 }
 
-#contact form input, #contact form select {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    background: none;
-    border: none;
-    border-bottom: 1px solid black;
+#contact form .row input::placehoder {
+    color: #4D5053;
 }
 
-#contact form input:focus, #contact form select:focus {
-    outline: none;
-}
-
-#contact form input::placeholder {
-    color: #C8C8C8;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-}
-
-#contact form select {
+#contact form .row select {
     cursor: pointer;
-    padding: 1px 2px;
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M5 6h10l-5 9-5-9z'/></svg>");
     background-repeat: no-repeat;
     background-position-x: 100%;
-    background-position-y: 5px;
+    background-position-y: 16px;
     padding-right: 2rem;
 }
 
+#contact form input:focus, #contact form select:focus {
+    outline: none;
+}
+
 #contact form select:required:invalid {
-    color: #C8C8C8;
+    color: #757575;
 }
 
 #contact form select option {
     color: #000;
 }
 
-#contact form button {
-    width: 100px;
-    height: 42px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 20px;
+#contact form input[type="date"] {
+    padding: 14px 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-#contact form button:hover {
-    background-color: #313131;
-    transition: 0.3s;
-}
-
-#contact .address {
-    display: flex;
-    gap: 10%;
-    padding-bottom: 100px;
-    padding-top: 50px;
-}
-
-#contact .address h5 {
-    color: #C8C8C8;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%;
-    margin: 0;
-}
-
-#contact .address a {
+input[type="date"] {
     color: black;
+}
+  
+input[type="date"]:invalid {
+    -webkit-text-fill-color: #757575;
+}
+
+#contact form .consent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    font-size: 18px;
+    gap: 10px;
+}
+
+#contact form .consent input, #contact form .consent label {
+    cursor: pointer;
+}
+
+#contact form .consent a {
+    color: #4D5053;
+    transition: 0.2s;
+}
+
+#contact form .consent a:hover {
+    color: black;
+}
+
+#contact form button {
+    width: max-content;
+    font-size: 17px;
+    transition: 0.3s;
+    padding: 10px;
     text-decoration: none;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    text-transform: capitalize;
+    border: 0;
+    cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) {
-    #contact form .row2 {
-        flex-direction: column;
-        gap: 20px;
-    }
-    #contact .address {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    #contact form .row {
-        flex-direction: column;
-        gap: 20px;
-    }
-    #contact form .row div, #contact form .row2 div {
-        max-width: 300px;
-        width: auto;
-    }
-    #contact form select {
-        width: 100%;
-    }
-}
+
 
 
 /*--------------------------------------------------------------

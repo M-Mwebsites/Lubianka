@@ -547,6 +547,16 @@ section {
     resize: vertical;
     background-color: transparent;
     transition: 0.1s;
+    text-align: left;
+}
+
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+    text-align: left;
 }
 
 #contact form .row input:focus, #contact form .row select:focus, #contact form .row textarea:focus {
@@ -571,6 +581,7 @@ section {
     background-position-x: 100%;
     background-position-y: 16px;
     padding-right: 2rem;
+    color: black;
 }
 
 #contact form input:focus, #contact form select:focus {

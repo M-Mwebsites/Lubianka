@@ -462,7 +462,9 @@ section {
 #contact .info .links .social .fb, #contact .links-mobile .social .fb {
     background-color: black;
     -webkit-mask: url(/Lubianka/assets/img/fb.svg) no-repeat center;
-    mask: url(/Lubianka/assets/img/fb.svg) no-repeat center;
+    mask: url(/assets/img/fb.svg) no-repeat center;
+    -webkit-mask: url(/Lubianka/assets/img/fb.svg) no-repeat center;
+    mask: url(/assets/img/fb.svg) no-repeat center;
     width: 32px;
     height: 32px;
     display: block;
@@ -477,7 +479,9 @@ section {
 #contact .info .links .social .ig, #contact .links-mobile .social .ig {
     background-color: black;
     -webkit-mask: url(/Lubianka/assets/img/ig.svg) no-repeat center;
-    mask: url(/Lubianka/assets/img/ig.svg) no-repeat center;
+    mask: url(/assets/img/ig.svg) no-repeat center;
+    -webkit-mask: url(/Lubianka/assets/img/ig.svg) no-repeat center;
+    mask: url(/assets/img/ig.svg) no-repeat center;
     width: 32px;
     height: 32px;
     display: block;

@@ -42,7 +42,7 @@
         <div class="menu">
             <!-- ozMenu -->
             <div class="menu-open"><span class="open"></span></div>
-            <div class="ozmenu mt-4">
+            <div id="menu-mobile" class="ozmenu mt-4">
                 <div class="menu-close"><span class="close"></span></div>
                 <ul class="ozmenu-nav">
                     <li class="item"><a href="#about">O nás</a></li>
@@ -163,10 +163,13 @@
                 </div>
                 <div class="consent">
                     <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Súhlasím so <a href="privacy-policy.html">spracovaním osobných údajov</a>.</label>
+                    <label for="consent">Súhlasím so <a href="osobne-udaje.html">spracovaním osobných údajov</a>.</label>
                 </div>
                 <button type="submit" class="link-button">Odoslať <span class="arrow"></span></button>
             </form>
+
+            <h3 id="successMessage" style="display: none;">Ďakujeme! Budeme vás čoskoro kontaktovať.</h3>
+            <h3 id="failureMessage" style="display: none;">Chyba! Skúste to neskôr alebo nám napíšte priamo na<br><a href="mailto:stodola.lubianka@gmail.com"><img src="assets/img/email.svg">stodola.lubianka@gmail.com</a></h3>
 
             <div class="links-mobile">
                 <div class="social">
@@ -176,16 +179,13 @@
                 <a href="mailto:stodola.lubianka@gmail.com"><img src="assets/img/email.svg">stodola.lubianka@gmail.com</a>
                 <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4714d19160edce3d:0x798e4fcc7febcb91?sa=X&ved=1t:8290&ictx=111" target="_blank" style="margin-left: -3px;"><img src="assets/img/pin.svg" width="32px">Ľubianka 713, 972 47 Oslany</a>  
             </div>
-            
-            <h3 id="successMessage" style="display: none;">Thank you! We will contact you soon.</h3>
-            <h3 id="failureMessage" style="display: none;">Error! Please, try again later.</h3>
         </section>
 
         <!-- ======= Footer ======= -->
         <footer id="footer">
             <p><span id="footerYear"></span> &copy; All rights reserved</p>
             <div class="links">
-                <a href="privacy-policy.html">Zásady spracovania osobných údajov</a>
+                <a href="osobne-udaje.html">Zásady spracovania osobných údajov</a>
             </div>
             <a href="https://m-mwebsites.github.io/MandM/">MADE BY <b>M&M</b></a>
         </footer>

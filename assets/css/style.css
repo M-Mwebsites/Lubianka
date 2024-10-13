@@ -679,6 +679,17 @@ input[type="date"]:invalid {
     }
 }
 
+#failureMessage a {
+    color: #4D5053;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+#failureMessage a:hover {
+    color: black;
+}
 
 
 /*--------------------------------------------------------------

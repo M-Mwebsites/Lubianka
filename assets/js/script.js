@@ -123,17 +123,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-    const contactLink = document.querySelector('a[href="#contact"]');
-    contactLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute("href"));
-        if (targetSection) {
-            const offset = targetSection.offsetTop;
-            window.scroll({
-                top: offset,
-                behavior: "smooth"
-            });
-        }
+    const contactLinks = document.querySelectorAll('a[href="#contact"]');
+    contactLinks.forEach(function(contactLink) {
+        contactLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute("href"));
+            if (targetSection) {
+                const offset = targetSection.offsetTop;
+                window.scroll({
+                    top: offset,
+                    behavior: "smooth"
+                });
+            }
+        });
     });
 });
 

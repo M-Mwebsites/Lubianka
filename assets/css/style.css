@@ -540,12 +540,21 @@ section {
 
 #contact form .row input, #contact form .row select, #contact form .row textarea {
     width: -webkit-fill-available;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 15px 10px;
     font-size: 16px;
     font-family: inherit;
     resize: vertical;
     background-color: transparent;
+    transition: 0.1s;
+}
+
+#contact form .row input:focus, #contact form .row select:focus, #contact form .row textarea:focus {
+    border: 2px solid black;
+}
+
+#contact form .row input:hover, #contact form .row select:hover, #contact form .row textarea:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #contact form .row input::placehoder, #contact form .row textarea::placehoder {

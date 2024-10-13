@@ -70,31 +70,45 @@ section {
 }
 
 #header .menu .item a {
-    color: black !important;
-    font-size: 30px !important;
+    color: white !important;
+    font-size: 17px !important;
     font-style: normal !important;
     line-height: normal !important;
     transition: 0.3s;
-    padding-left: 7px;
 }
 
 #header .menu .item a:hover {
     font-weight: bold;
-    color: black !important;
 }
 
-#header .menu .item a.link-button {
-    width: max-content;
-    background-color: white !important;
-    font-weight: normal !important;
-}
-
-#header .menu .item a.link-button:hover {
-    font-weight: bold !important;
-}
-
-#header .menu .item a.link-button span {
-    display: none;
+@media only screen and (max-width: 992px) {
+    #header .menu .item a {
+        color: black !important;
+        font-size: 30px !important;
+        font-style: normal !important;
+        line-height: normal !important;
+        transition: 0.3s;
+        padding-left: 7px;
+    }
+    
+    #header .menu .item a:hover {
+        font-weight: bold;
+        color: black !important;
+    }
+    
+    #header .menu .item a.link-button {
+        width: max-content;
+        background-color: white !important;
+        font-weight: normal !important;
+    }
+    
+    #header .menu .item a.link-button:hover {
+        font-weight: bold !important;
+    }
+    
+    #header .menu .item a.link-button span {
+        display: none;
+    }
 }
 
 

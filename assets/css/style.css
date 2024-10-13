@@ -70,17 +70,32 @@ section {
 }
 
 #header .menu .item a {
-    color: white !important;
-    font-size: 17px !important;
+    color: black !important;
+    font-size: 30px !important;
     font-style: normal !important;
     line-height: normal !important;
     transition: 0.3s;
+    padding-left: 7px;
 }
 
 #header .menu .item a:hover {
     font-weight: bold;
+    color: black !important;
 }
 
+#header .menu .item a.link-button {
+    width: max-content;
+    background-color: white !important;
+    font-weight: normal !important;
+}
+
+#header .menu .item a.link-button:hover {
+    font-weight: bold !important;
+}
+
+#header .menu .item a.link-button span {
+    display: none;
+}
 
 
 
@@ -114,6 +129,19 @@ section {
     bottom: 15vh;
     left: 0;
     padding-left: 100px;
+}
+
+@media only screen and (max-width: 992px) {
+    #hero .text {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #hero .text {
+        font-size: 40px;
+        padding-left: 10%;
+    }
 }
 
 
@@ -153,6 +181,39 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#about .text-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    #about {
+        flex-direction: column;
+    }
+    #about img {
+        width: 100%;
+    }
+    #about .description {
+        width: 100%;
+        font-size: 18px;
+    }
+    #about .text {
+        display: none;
+    }
+    #about .text-mobile {
+        display: block;
+        font-size: 7vw;
+        font-weight: bold;
+        line-height: 125%;
+        color: black;
+        position: absolute;
+        top: 5vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
 }
 
 /*--------------------------------------------------------------
@@ -230,6 +291,53 @@ section {
     width: max-content;
 }
 
+#services .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    #services .description .title {
+        font-size: 50px;
+    }
+    #services .description .text {
+        font-size: 18px;
+    }
+    #services .description .link-button {
+        font-size: 15px;
+    }
+    #services .images div p {
+        font-size: 33px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #services {
+        flex-direction: column;
+    }
+    #services div {
+        width: 100%;
+    }
+    #services .description .title {
+        font-size: 40px;
+    }
+    #services .description .link-button {
+        display: none;
+    }
+    #services .mobile {
+        display: block;
+    }
+    #services .mobile .link-button {
+        width: max-content;
+        font-size: 15px;
+        transition: 0.3s;
+        padding: 10px;
+        text-decoration: none;
+    }
+    #services .images div p {
+        font-size: 6vw;
+    }
+}
+
 /*--------------------------------------------------------------
 # Areal
 --------------------------------------------------------------*/
@@ -265,6 +373,27 @@ section {
 #areal #gallery img:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    #areal #gallery img {
+        width: 28%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #areal .title {
+        font-size: 32px;
+    }
+    #areal #gallery {
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #areal #gallery img {
+        width: 40%;
+    }
 }
 
 
@@ -310,13 +439,13 @@ section {
     padding-bottom: 10px;
 }
 
-#contact .info .social {
+#contact .info .links .social, #contact .links-mobile .social {
     margin-left: -3px;
     display: flex;
     gap: 10px;
 }
 
-#contact .info .social .fb {
+#contact .info .links .social .fb, #contact .links-mobile .social .fb {
     background-color: black;
     -webkit-mask: url(/assets/img/fb.svg) no-repeat center;
     mask: url(/assets/img/fb.svg) no-repeat center;
@@ -326,12 +455,12 @@ section {
     transition: 0.2s;
 }
 
-#contact .info .social .fb:hover {
+#contact .info .links .social .fb:hover, #contact .links-mobile .social .fb:hover {
     background-color: #0866ff;
     cursor: pointer;
 }
 
-#contact .info .social .ig {
+#contact .info .links .social .ig, #contact .links-mobile .social .ig {
     background-color: black;
     -webkit-mask: url(/assets/img/ig.svg) no-repeat center;
     mask: url(/assets/img/ig.svg) no-repeat center;
@@ -341,12 +470,12 @@ section {
     transition: 0.2s;
 }
 
-#contact .info .social .ig:hover {
+#contact .info .links .social .ig:hover, #contact .links-mobile .social .ig:hover {
     background-color: #dc4a6b;
     cursor: pointer;
 }
 
-#contact .info a {
+#contact .info a, #contact .links-mobile a {
     font-size: 22px;
     font-weight: 400;
     line-height: 33px;
@@ -359,10 +488,14 @@ section {
     transition: 0.2s;
 }
 
-#contact .info a:hover {
+#contact .info a:hover, #contact .links-mobile a:hover {
     color: black;
 }
 
+
+#contact .links-mobile {
+    display: none;
+}
 
 /** form **/
 #contact form {
@@ -391,15 +524,17 @@ section {
     padding-bottom: 10px;
 }
 
-#contact form .row input, #contact form .row select {
+#contact form .row input, #contact form .row select, #contact form .row textarea {
     width: -webkit-fill-available;
     border: 2px solid black;
     padding: 15px 10px;
     font-size: 16px;
     font-family: inherit;
+    resize: vertical;
+    background-color: transparent;
 }
 
-#contact form .row input::placehoder {
+#contact form .row input::placehoder, #contact form .row textarea::placehoder {
     color: #4D5053;
 }
 
@@ -472,7 +607,54 @@ input[type="date"]:invalid {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1395px) {
+    #contact form .row {
+        flex-direction: column;
+        padding-bottom: 20px;
+        gap: 20px;
+    }
+    #contact form div {
+        width: 100%;
+    }
+}
 
+@media only screen and (max-width: 992px) {
+    #contact .info .title {
+        font-size: 50px;
+    }
+    #contact .info .text, #contact .info a, #contact .links-mobile a {
+        font-size: 18px;
+    }
+    #contact form .row label, #contact form .consent {
+        font-size: 16px;
+    }
+    #contact form .row input, #contact form .row select, #contact form .row textarea {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #contact {
+        flex-direction: column;
+    }
+    #contact .info {
+        width: 100%;
+    }
+    #contact .info .title {
+        font-size: 40px;
+    }
+    #contact .info .links {
+        display: none;
+    }
+    #contact .links-mobile {
+        display: block;
+        padding-top: 40px;
+        width: 100%;
+    }
+    #contact .links-mobile a {
+        padding-top: 8px;
+    }
+}
 
 
 

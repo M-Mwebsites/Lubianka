@@ -184,3 +184,12 @@ modal.onclick = function(e) {
         modal.style.display = "none";
     }
 };
+
+
+document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+        const loadingElement = document.getElementById('loading');
+        loadingElement.style.opacity = "0";
+        loadingElement.style.visibility = "hidden";
+    }
+}

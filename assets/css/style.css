@@ -177,8 +177,6 @@ section {
 #about {
     padding-left: 10%;
     padding-right: 10%;
-    position: relative;
-    justify-content: space-between;
     padding-top: 100px;
     padding-bottom: 100px;
     align-items: center;
@@ -457,13 +455,19 @@ section {
         font-size: 32px;
     }
     #areal #gallery {
-        gap: 30px;
+        gap: 20px;
+    }
+    #areal #gallery img {
+        width: 45%;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    #areal #gallery {
+        gap: 15px;
+    }
     #areal #gallery img {
-        width: 40%;
+        width: 100%;
     }
 }
 

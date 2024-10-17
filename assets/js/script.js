@@ -92,11 +92,18 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute("href"));
         if (targetSection) {
-            const offset = targetSection.offsetTop - header.offsetHeight;
+            let offset = targetSection.offsetTop - header.offsetHeight;
             window.scroll({
                 top: offset,
                 behavior: "smooth"
             });
+            setTimeout(function() {
+                offset = targetSection.offsetTop - header.offsetHeight;
+                window.scroll({
+                    top: offset,
+                    behavior: "smooth"
+                });
+            }, 700);
         }
     });
     const servicesLink = document.querySelector('a[href="#services"]');

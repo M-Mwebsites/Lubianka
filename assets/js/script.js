@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute("href"));
         if (targetSection) {
-            const offset = targetSection.offsetTop - header.offsetHeight - 100;
+            const offset = targetSection.offsetTop - header.offsetHeight;
             window.scroll({
                 top: offset,
                 behavior: "smooth"

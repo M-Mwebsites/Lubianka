@@ -163,7 +163,10 @@ var currentIndex = 0;
 function openModal(index) {
     currentIndex = index;
     modal.style.display = "block";
-    modalImg.src = galleryImages[currentIndex].src;
+    let imgSrc = galleryImages[currentIndex].src;
+    let lastSlashIndex = imgSrc.lastIndexOf('/');
+    let modifiedSrc = imgSrc.slice(0, lastSlashIndex + 1) + 'large/' + imgSrc.slice(lastSlashIndex + 1);
+    modalImg.src = modifiedSrc;
 }
 
 galleryImages.forEach(function(img, index) {
@@ -178,12 +181,18 @@ closeBtn.onclick = function() {
 
 prevBtn.onclick = function() {
     currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    modalImg.src = galleryImages[currentIndex].src;
+    let imgSrc = galleryImages[currentIndex].src;
+    let lastSlashIndex = imgSrc.lastIndexOf('/');
+    let modifiedSrc = imgSrc.slice(0, lastSlashIndex + 1) + 'large/' + imgSrc.slice(lastSlashIndex + 1);
+    modalImg.src = modifiedSrc;
 };
 
 nextBtn.onclick = function() {
     currentIndex = (currentIndex + 1) % galleryImages.length;
-    modalImg.src = galleryImages[currentIndex].src;
+    let imgSrc = galleryImages[currentIndex].src;
+    let lastSlashIndex = imgSrc.lastIndexOf('/');
+    let modifiedSrc = imgSrc.slice(0, lastSlashIndex + 1) + 'large/' + imgSrc.slice(lastSlashIndex + 1);
+    modalImg.src = modifiedSrc;
 };
 
 modal.onclick = function(e) {
@@ -200,3 +209,22 @@ document.onreadystatechange = function () {
         loadingElement.style.visibility = "hidden";
     }
 }
+
+
+
+const slidesContainer = document.querySelector('.slides-container');
+const reviews = document.querySelectorAll('.review');
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+let currentReview = 0;
+
+function showReview(index) {
+    currentReview = (index + reviews.length) % reviews.length; // ensures index wraps around
+    const offset = -currentReview * 100; // calculate offset for sliding
+    slidesContainer.style.transform = `translateX(${offset}%)`;
+}
+
+// Event listeners for the arrows
+leftArrow.addEventListener('click', () => showReview(currentReview - 1));
+rightArrow.addEventListener('click', () => showReview(currentReview + 1));
+

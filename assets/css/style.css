@@ -101,22 +101,22 @@ section {
         transition: 0.3s;
         padding-left: 7px;
     }
-    
+
     #header .menu .item a:hover {
         font-weight: bold;
         color: black !important;
     }
-    
+
     #header .menu .item a.link-button {
         width: max-content;
         background-color: white !important;
         font-weight: normal !important;
     }
-    
+
     #header .menu .item a.link-button:hover {
         font-weight: bold !important;
     }
-    
+
     #header .menu .item a.link-button span {
         display: none;
     }
@@ -132,17 +132,22 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    width: 100vw;  /* Full viewport width */
-    overflow: hidden; /* Hide overflow */
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    overflow: hidden;
+    /* Hide overflow */
 }
 
 #hero video {
     min-width: 100%;
     min-height: 100%;
-    object-fit: cover; /* Ensure video covers the entire area */
+    object-fit: cover;
+    /* Ensure video covers the entire area */
     width: 100%;
-    height: auto; /* Auto height to maintain aspect ratio */
+    height: auto;
+    /* Auto height to maintain aspect ratio */
 }
 
 #hero .text {
@@ -188,7 +193,7 @@ section {
     font-size: 140px;
     font-weight: 700;
     line-height: 120px;
-    color: rgba(0,0,0,0.11);
+    color: #e3e3e3;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -269,22 +274,28 @@ section {
     #about-bottom .title {
         font-size: 80px;
     }
+
     #about-bottom .text {
         font-size: 22px;
     }
+
     #about-bottom {
         flex-direction: column;
     }
+
     #about-bottom img {
         width: 100%;
     }
+
     #about-bottom .description {
         width: 100%;
         font-size: 18px;
     }
+
     #about-bottom .text {
         display: none;
     }
+
     #about-bottom .text-mobile {
         display: block;
         font-size: 7vw;
@@ -300,6 +311,7 @@ section {
     #about .title {
         font-size: 100px;
     }
+
     #about .text {
         font-size: 20px;
         line-height: 30px;
@@ -311,24 +323,29 @@ section {
     #about .title {
         font-size: 80px;
     }
+
     #about .text {
         font-size: 18px;
         line-height: 30px;
     }
+
     #about-bottom .text-mobile {
         font-size: 10vw;
         max-width: 60vw;
         line-height: 1;
-        top: -5vw;
+        top: -20vw;
         margin-left: -15%;
     }
+
     #about-bottom .description {
         width: 95%;
     }
 }
 
 @media only screen and (max-width: 570px) {
-    #about .decoration1, #about .decoration2 {
+
+    #about .decoration1,
+    #about .decoration2 {
         display: none;
     }
 }
@@ -347,13 +364,11 @@ section {
     display: flex;
     align-items: center;
     flex: 1;
-    background: linear-gradient(
-        to right,
-        white 0%,
-        white 20%,
-        #D5C9C545 20%,
-        #D5C9C545 100%
-      );
+    background: linear-gradient(to right,
+            white 0%,
+            white 20%,
+            #D5C9C545 20%,
+            #D5C9C545 100%);
 }
 
 #services div {
@@ -416,12 +431,15 @@ section {
     #services .description .title {
         font-size: 50px;
     }
+
     #services .description .text {
         font-size: 18px;
     }
+
     #services .description .link-button {
         font-size: 15px;
     }
+
     #services .images div p {
         font-size: 33px;
     }
@@ -431,18 +449,23 @@ section {
     #services {
         flex-direction: column;
     }
+
     #services div {
         width: 100%;
     }
+
     #services .description .title {
         font-size: 40px;
     }
+
     #services .description .link-button {
         display: none;
     }
+
     #services .mobile {
         display: block;
     }
+
     #services .mobile .link-button {
         width: max-content;
         font-size: 15px;
@@ -450,8 +473,95 @@ section {
         padding: 10px;
         text-decoration: none;
     }
+    #services .images div {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
     #services .images div p {
         font-size: 6vw;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Reviews
+--------------------------------------------------------------*/
+
+#reviews {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+#reviews .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 125%;
+    color: #e3e3e3;
+    margin: 70px 0 30px;
+}
+
+#reviews .slider {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+#reviews .slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+#reviews .review {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10%;
+    font-size: 13px;
+    line-height: 19.5px;
+}
+
+#reviews .author {
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#reviews .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+#reviews .arrow-left {
+    left: 2%;
+}
+
+#reviews .arrow-right {
+    right: 2%;
+}
+
+@media only screen and (max-width: 700px) {
+    #reviews .slider {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    #reviews .arrow img {
+        width: 20px;
+    }
+    #reviews .review {
+        padding: 0 14%;
+    }
+    #reviews {
+        padding-bottom: 0;
     }
 }
 
@@ -502,9 +612,11 @@ section {
     #areal .title {
         font-size: 32px;
     }
+
     #areal #gallery {
         gap: 20px;
     }
+
     #areal #gallery img {
         width: 45%;
     }
@@ -514,6 +626,7 @@ section {
     #areal #gallery {
         gap: 15px;
     }
+
     #areal #gallery img {
         width: 100%;
     }
@@ -533,13 +646,11 @@ section {
     display: flex;
     align-items: center;
     gap: 10%;
-    background: linear-gradient(
-        to right,
-        #D5C9C545 0%,
-        #D5C9C545 25%,
-        white 25%,
-        white 100%
-      );
+    background: linear-gradient(to right,
+            #D5C9C545 0%,
+            #D5C9C545 25%,
+            white 25%,
+            white 100%);
 }
 
 #contact .info {
@@ -562,13 +673,15 @@ section {
     padding-bottom: 10px;
 }
 
-#contact .info .links .social, #contact .links-mobile .social {
+#contact .info .links .social,
+#contact .links-mobile .social {
     margin-left: -3px;
     display: flex;
     gap: 10px;
 }
 
-#contact .info .links .social .fb, #contact .links-mobile .social .fb {
+#contact .info .links .social .fb,
+#contact .links-mobile .social .fb {
     background-color: black;
     -webkit-mask: url(/Lubianka/assets/img/fb.svg) no-repeat center;
     mask: url(/Lubianka/assets/img/fb.svg) no-repeat center;
@@ -578,12 +691,14 @@ section {
     transition: 0.2s;
 }
 
-#contact .info .links .social .fb:hover, #contact .links-mobile .social .fb:hover {
+#contact .info .links .social .fb:hover,
+#contact .links-mobile .social .fb:hover {
     background-color: #0866ff;
     cursor: pointer;
 }
 
-#contact .info .links .social .ig, #contact .links-mobile .social .ig {
+#contact .info .links .social .ig,
+#contact .links-mobile .social .ig {
     background-color: black;
     -webkit-mask: url(/Lubianka/assets/img/ig.svg) no-repeat center;
     mask: url(/Lubianka/assets/img/ig.svg) no-repeat center;
@@ -593,12 +708,14 @@ section {
     transition: 0.2s;
 }
 
-#contact .info .links .social .ig:hover, #contact .links-mobile .social .ig:hover {
+#contact .info .links .social .ig:hover,
+#contact .links-mobile .social .ig:hover {
     background-color: #dc4a6b;
     cursor: pointer;
 }
 
-#contact .info a, #contact .links-mobile a {
+#contact .info a,
+#contact .links-mobile a {
     font-size: 22px;
     font-weight: 400;
     line-height: 33px;
@@ -611,7 +728,8 @@ section {
     transition: 0.2s;
 }
 
-#contact .info a:hover, #contact .links-mobile a:hover {
+#contact .info a:hover,
+#contact .links-mobile a:hover {
     color: black;
 }
 
@@ -647,7 +765,9 @@ section {
     padding-bottom: 10px;
 }
 
-#contact form .row input, #contact form .row select, #contact form .row textarea {
+#contact form .row input,
+#contact form .row select,
+#contact form .row textarea {
     width: -webkit-fill-available;
     border: 1px solid black;
     padding: 15px 10px;
@@ -659,24 +779,28 @@ section {
     text-align: left;
 }
 
-input[type="date"]
-{
-    display:block;
+input[type="date"] {
+    display: block;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     min-height: 1.2em;
     text-align: left;
 }
 
-#contact form .row input:focus, #contact form .row select:focus, #contact form .row textarea:focus {
+#contact form .row input:focus,
+#contact form .row select:focus,
+#contact form .row textarea:focus {
     border: 2px solid black;
 }
 
-#contact form .row input:hover, #contact form .row select:hover, #contact form .row textarea:hover {
+#contact form .row input:hover,
+#contact form .row select:hover,
+#contact form .row textarea:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#contact form .row input::placehoder, #contact form .row textarea::placehoder {
+#contact form .row input::placehoder,
+#contact form .row textarea::placehoder {
     color: #4D5053;
 }
 
@@ -693,7 +817,8 @@ input[type="date"]
     color: black;
 }
 
-#contact form input:focus, #contact form select:focus {
+#contact form input:focus,
+#contact form select:focus {
     outline: none;
 }
 
@@ -713,7 +838,7 @@ input[type="date"]
 input[type="date"] {
     color: black;
 }
-  
+
 input[type="date"]:invalid {
     -webkit-text-fill-color: #757575;
 }
@@ -727,7 +852,8 @@ input[type="date"]:invalid {
     gap: 10px;
 }
 
-#contact form .consent input, #contact form .consent label {
+#contact form .consent input,
+#contact form .consent label {
     cursor: pointer;
 }
 
@@ -756,6 +882,7 @@ input[type="date"]:invalid {
         padding-bottom: 20px;
         gap: 20px;
     }
+
     #contact form div {
         width: 100%;
     }
@@ -765,13 +892,21 @@ input[type="date"]:invalid {
     #contact .info .title {
         font-size: 50px;
     }
-    #contact .info .text, #contact .info a, #contact .links-mobile a {
+
+    #contact .info .text,
+    #contact .info a,
+    #contact .links-mobile a {
         font-size: 18px;
     }
-    #contact form .row label, #contact form .consent {
+
+    #contact form .row label,
+    #contact form .consent {
         font-size: 16px;
     }
-    #contact form .row input, #contact form .row select, #contact form .row textarea {
+
+    #contact form .row input,
+    #contact form .row select,
+    #contact form .row textarea {
         font-size: 16px;
     }
 }
@@ -780,20 +915,25 @@ input[type="date"]:invalid {
     #contact {
         flex-direction: column;
     }
+
     #contact .info {
         width: 100%;
     }
+
     #contact .info .title {
         font-size: 40px;
     }
+
     #contact .info .links {
         display: none;
     }
+
     #contact .links-mobile {
         display: block;
         padding-top: 40px;
         width: 100%;
     }
+
     #contact .links-mobile a {
         padding-top: 8px;
     }
@@ -862,11 +1002,11 @@ input[type="date"]:invalid {
 
 #conti {
     text-decoration: none;
-  }
+}
 
-  #conti.underline {
+#conti.underline {
     text-decoration: underline;
-  }
+}
 
 
 
@@ -905,7 +1045,8 @@ input[type="date"]:invalid {
     cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -928,19 +1069,28 @@ input[type="date"]:invalid {
     left: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal img.loading-image {
+    background: transparent url('/Lubianka/assets/img/loading.gif') no-repeat scroll center center;
 }
 
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
-    .prev, .next {
+
+    .prev,
+    .next {
         background-color: transparent;
         padding: 0;
     }
-    .prev:hover, .next:hover {
+
+    .prev:hover,
+    .next:hover {
         background-color: transparent;
     }
 }
